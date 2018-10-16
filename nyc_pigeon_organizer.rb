@@ -1,11 +1,11 @@
-def nyc_pigeon_organizer(pigeon_data)
+def nyc_pigeon_organizer(data)
   pigeon_list ={}
-  pigeon_data[:gender].values.flatten.each do |name|
+  data[:gender].values.flatten.each do |name|
     pigeon_list[name] = {:color => [], :gender => [], :lives => []}
   end
-  pigeon_values(:color, pigeon_list, pigeon_data)
-  pigeon_values(:gender, pigeon_list, pigeon_data)
-  pigeon_values(:lives, pigeon_list, pigeon_data)
+  pigeon_values(:color, pigeon_list, data)
+  pigeon_values(:gender, pigeon_list, data)
+  pigeon_values(:lives, pigeon_list, data)
   pigeon_list
 end
 
